@@ -28,8 +28,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                             mostra_data.ano);
 
         timer1.start();
-    }
-
+    } 
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
