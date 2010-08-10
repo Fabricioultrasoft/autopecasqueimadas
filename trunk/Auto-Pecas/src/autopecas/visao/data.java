@@ -26,13 +26,13 @@ public class data
 
         switch (data.getDay())
         {
-            case 0: dia_semana = "domingo";break;
-            case 1: dia_semana = "segunda-feira";break;
-            case 2: dia_semana = "terça-feira";break;
-            case 3: dia_semana = "quarta-feira";break;
-            case 4: dia_semana = "quinta-feira";break;
-            case 5: dia_semana = "sexta-feira";break;
-            case 6: dia_semana = "sábado";break;
+            case 0: dia_semana = "Domingo";break;
+            case 1: dia_semana = "Segunda-feira";break;
+            case 2: dia_semana = "Terça-feira";break;
+            case 3: dia_semana = "Quarta-feira";break;
+            case 4: dia_semana = "Quinta-feira";break;
+            case 5: dia_semana = "Sexta-feira";break;
+            case 6: dia_semana = "Sábado";break;
 
         }
 

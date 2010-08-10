@@ -8,13 +8,21 @@
       </Events>
     </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="0" type="rgb"/>
+        </Property>
+      </Properties>
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu_cadastros">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="cc" red="0" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cadastros"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_cad_produtos">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
@@ -22,10 +30,13 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\botoes\produto.gif"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Produtos"/>
+                <Property name="text" type="java.lang.String" value="Cadastro de Produtos"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem_cad_produtosMousePressed"/>
+              </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_clientes">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
@@ -33,13 +44,16 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\botoes\cliente.gif"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Clientes"/>
+                <Property name="text" type="java.lang.String" value="Cadastro de Clientes"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu_sair">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="cc" red="0" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
@@ -51,6 +65,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Auto Pe&#xe7;as"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -76,22 +91,22 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Component id="jLabel_data" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="jLabel_hora" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="509" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel_data" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel_hora" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="603" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace pref="554" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel_data" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_hora" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="536" max="32767" attributes="0"/>
+              <Component id="jLabel_data" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="jLabel_hora" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
@@ -101,20 +116,22 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="cc" red="0" type="rgb"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
         </Property>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton_produtos" alignment="0" pref="147" max="32767" attributes="0"/>
-                      <Component id="jButton_sair" alignment="1" pref="147" max="32767" attributes="0"/>
-                      <Component id="jButton_clientes" alignment="0" pref="147" max="32767" attributes="0"/>
+                      <Component id="jButton1" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                      <Component id="jButton_produtos" linkSize="3" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
+                      <Component id="jButton_sair" alignment="0" pref="147" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -125,11 +142,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton_produtos" linkSize="2" min="-2" pref="37" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="jButton_clientes" linkSize="2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton1" linkSize="2" min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton_sair" linkSize="2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="371" max="32767" attributes="0"/>
+                  <EmptySpace pref="387" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -138,29 +155,29 @@
         <Component class="javax.swing.JButton" name="jButton_produtos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Arial" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Produtos"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton_clientes">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Clientes"/>
+            <Property name="text" type="java.lang.String" value="Entrada de Material"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton_sair">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="14" style="0"/>
+              <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_sairActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Vendas"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
