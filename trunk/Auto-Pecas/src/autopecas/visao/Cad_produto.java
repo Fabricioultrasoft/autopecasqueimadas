@@ -94,7 +94,7 @@ public class Cad_produto extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Produtos");
+        setTitle("Auto Peças - Cadastro de Produtos");
 
         jLabel_codigo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_codigo.setText("Código:");
@@ -155,7 +155,7 @@ public class Cad_produto extends javax.swing.JFrame {
 
         tf_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14));
 
-        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12));
         botao_salvar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\GRAVAR2.jpg")); // NOI18N
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
@@ -189,7 +189,7 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12));
         jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\novo_reg.gif")); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
@@ -408,7 +408,7 @@ public class Cad_produto extends javax.swing.JFrame {
         if (Integer.parseInt(mes)<=9)
             mes = "0"+mes;
         tf_dt_cadastro.setText(dia+mes+ano);
-        tf_cod_produto.requestFocus();//foca o cursor no campo nome
+        tf_descricao.requestFocus();//foca o cursor no campo descrição
         tf_cod_produto.setEditable(false);//deixa o campo código inativo
     }//GEN-LAST:event_jButton_novo_regActionPerformed
 

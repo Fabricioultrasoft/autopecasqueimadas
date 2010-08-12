@@ -11,9 +11,11 @@
 
 package autopecas.visao;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author Kelly
+ * @author Junior
  */
 public class Tela_Principal extends javax.swing.JFrame {
     data mostra_data;//variavel que vai chamar os metodos da data e hora
@@ -45,6 +47,8 @@ public class Tela_Principal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel_hora = new javax.swing.JLabel();
         jLabel_data = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu_cadastros = new javax.swing.JMenu();
         jMenuItem_cad_produtos = new javax.swing.JMenuItem();
@@ -62,10 +66,15 @@ public class Tela_Principal extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton_produtos.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton_produtos.setFont(new java.awt.Font("Arial", 0, 12));
         jButton_produtos.setText("Entrada de Material");
+        jButton_produtos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_produtosActionPerformed(evt);
+            }
+        });
 
-        jButton_sair.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton_sair.setFont(new java.awt.Font("Arial", 0, 12));
         jButton_sair.setText("Sair");
         jButton_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +82,7 @@ public class Tela_Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Arial", 0, 12));
         jButton1.setText("Vendas");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -109,12 +118,18 @@ public class Tela_Principal extends javax.swing.JFrame {
 
         jLabel_data.setText("data");
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
+        jLabel1.setText("EstoqueTools");
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setText("Controle de Estoque");
+
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
         jMenu_cadastros.setBackground(new java.awt.Color(0, 204, 0));
         jMenu_cadastros.setText("Cadastros");
 
-        jMenuItem_cad_produtos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem_cad_produtos.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem_cad_produtos.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\produto.gif")); // NOI18N
         jMenuItem_cad_produtos.setText("Cadastro de Produtos");
         jMenuItem_cad_produtos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -148,16 +163,31 @@ public class Tela_Principal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_data)
-                    .addComponent(jLabel_hora))
-                .addContainerGap(603, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_data)
+                                .addComponent(jLabel_hora))
+                            .addContainerGap(603, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel1)
+                            .addGap(182, 182, 182)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addGap(238, 238, 238))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(536, Short.MAX_VALUE)
+                .addContainerGap(254, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(199, 199, 199)
                 .addComponent(jLabel_data)
                 .addGap(4, 4, 4)
                 .addComponent(jLabel_hora)
@@ -171,7 +201,15 @@ public class Tela_Principal extends javax.swing.JFrame {
 
     private void jMenu_sairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu_sairMouseClicked
         // Evento do menu_sair
-        System.exit(0);
+        try {
+            String nome = "Tem certeza que deseja sair do sistema?";
+            int opcao_escolhida = JOptionPane.showConfirmDialog(null, nome, "Sair", JOptionPane.YES_NO_OPTION);
+            if(opcao_escolhida == JOptionPane.YES_OPTION){
+                System.exit(0);
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Erro ao fechar o sistema! "+erro);
+        }
     }//GEN-LAST:event_jMenu_sairMouseClicked
 
     private void timer1OnTime(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timer1OnTime
@@ -182,13 +220,26 @@ public class Tela_Principal extends javax.swing.JFrame {
 
     private void jButton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_sairActionPerformed
         // Evento do botão sair
-        System.exit(0);
+        try {
+            String nome = "Tem certeza que deseja sair do sistema?";
+            int opcao_escolhida = JOptionPane.showConfirmDialog(null, nome, "Sair", JOptionPane.YES_NO_OPTION);
+            if(opcao_escolhida == JOptionPane.YES_OPTION){
+                System.exit(0);
+            }
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Erro ao fechar o sistema! "+erro);
+        }
 }//GEN-LAST:event_jButton_sairActionPerformed
 
     private void jMenuItem_cad_produtosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_cad_produtosMousePressed
         //evento do menuItem_cad_produtos
         new Cad_produto().show();
     }//GEN-LAST:event_jMenuItem_cad_produtosMousePressed
+
+    private void jButton_produtosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_produtosActionPerformed
+        // evento do botão entrada de material
+        new Entrada_material().show();
+    }//GEN-LAST:event_jButton_produtosActionPerformed
 
     /**
     * @param args the command line arguments
@@ -205,6 +256,8 @@ public class Tela_Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton_produtos;
     private javax.swing.JButton jButton_sair;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel_data;
     private javax.swing.JLabel jLabel_hora;
     private javax.swing.JMenuBar jMenuBar1;
