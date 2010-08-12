@@ -175,7 +175,7 @@ public class Tela_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu_sairMouseClicked
 
     private void timer1OnTime(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timer1OnTime
-        // TODO add your handling code here:
+        // evento do timer1 que mostra os segundos
         mostra_data.le_hora();
         jLabel_hora.setText(mostra_data.hora);
     }//GEN-LAST:event_timer1OnTime
