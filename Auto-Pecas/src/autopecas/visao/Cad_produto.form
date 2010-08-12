@@ -38,7 +38,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
-    <Property name="title" type="java.lang.String" value="Cadastro de Produtos"/>
+    <Property name="title" type="java.lang.String" value="Auto Pe&#xe7;as - Cadastro de Produtos"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
