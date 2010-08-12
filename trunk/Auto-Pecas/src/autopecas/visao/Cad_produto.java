@@ -22,10 +22,20 @@ import javax.swing.text.MaskFormatter;
  */
 public class Cad_produto extends javax.swing.JFrame {
 
+    data mostra_data;//variavel que vai chamar os metodos da data e hora
     MaskFormatter formatoPreco, formatoCnpj, formatoCep, formatoFone, formatoData;
     /** Creates new form Cad_produto */
     public Cad_produto() {
         initComponents();
+
+        mostra_data = new data();//objeto inicializado
+        mostra_data.le_data();
+        jLabel_data.setText(mostra_data.dia_semana + ", " +
+                            mostra_data.dia + " de " +
+                            mostra_data.mes + " de " +
+                            mostra_data.ano);
+
+        timer1.start();
     }
 
     /** This method is called from within the constructor to
@@ -37,6 +47,7 @@ public class Cad_produto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        timer1 = new org.netbeans.examples.lib.timerbean.Timer();
         jLabel_codigo = new javax.swing.JLabel();
         tf_cod_produto = new javax.swing.JTextField();
         jLabel_descricao = new javax.swing.JLabel();
@@ -66,13 +77,21 @@ public class Cad_produto extends javax.swing.JFrame {
         botao_alterar = new javax.swing.JButton();
         botao_excluir = new javax.swing.JButton();
         Botao_sair = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton_novo_reg = new javax.swing.JButton();
         jLabel_dt_cadastro = new javax.swing.JLabel();
         try  {    formatoData = new MaskFormatter("##/##/####");  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, "Não foi possível setar a máscara em formatoData, erro = "+ erro);  }
         tf_dt_cadastro = new JFormattedTextField(formatoData);
+        jLabel_data = new javax.swing.JLabel();
+        jLabel_hora = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu_sair = new javax.swing.JMenu();
+
+        timer1.addTimerListener(new org.netbeans.examples.lib.timerbean.TimerListener() {
+            public void onTime(java.awt.event.ActionEvent evt) {
+                timer1OnTime(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Produtos");
@@ -80,12 +99,12 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_codigo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_codigo.setText("Código:");
 
-        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_descricao.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_descricao.setText("Descrição:");
 
-        tf_descricao.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_descricao.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_conteudo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_conteudo.setText("Conteúdo:");
@@ -96,75 +115,101 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_grupo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_grupo.setText("Grupo:");
 
-        tf_grupo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_grupo.setFont(new java.awt.Font("Arial", 0, 14));
 
-        tf_conteudo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_conteudo.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_fabricante.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_fabricante.setText("Fabricante:");
 
-        tf_fabricante.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_fabricante.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel1.setText("Classificação:");
 
-        tf_classificacao.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_classificacao.setFont(new java.awt.Font("Arial", 0, 14));
 
-        jLabel_cod_forn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_cod_forn.setText("Cód. Fornecedor");
 
-        jLabel_fornecedor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_fornecedor.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_fornecedor.setText("Fornecedor:");
 
-        tf_fornecedor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_fornecedor.setFont(new java.awt.Font("Arial", 0, 14));
 
-        cb_cod_forn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        cb_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
         cb_cod_forn.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel_dt_ultima_compra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_dt_ultima_compra.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_dt_ultima_compra.setText("Ultima Compra:");
 
-        tf_dt_ult_compra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_dt_ult_compra.setFont(new java.awt.Font("Arial", 0, 14));
 
-        jLabel_dt_ult_venda.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_dt_ult_venda.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_dt_ult_venda.setText("Ultima Venda:");
 
-        tf_dt_ult_venda.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_dt_ult_venda.setFont(new java.awt.Font("Arial", 0, 14));
 
-        jLabel_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_quant_estoq.setText("Quant. em Estoque:");
 
-        tf_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14));
 
+        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botao_salvar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\GRAVAR2.jpg")); // NOI18N
-        botao_salvar.setToolTipText("Salvar Produto");
+        botao_salvar.setText("Salvar");
+        botao_salvar.setToolTipText("");
+        botao_salvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botao_salvar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_salvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_alterar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\alterar_dados.jpg")); // NOI18N
-        botao_alterar.setToolTipText("Salvar Alterações");
+        botao_alterar.setText("Alterar Registro");
+        botao_alterar.setToolTipText("");
+        botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_excluir.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\EXCLUIR.jpg")); // NOI18N
-        botao_excluir.setToolTipText("Excluir Produto");
+        botao_excluir.setText("Excluir Registro");
+        botao_excluir.setToolTipText("");
+        botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         Botao_sair.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\SAIR.jpg")); // NOI18N
-        Botao_sair.setToolTipText("Sair");
+        Botao_sair.setText("Sair");
+        Botao_sair.setToolTipText("");
+        Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Botao_sair.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Botao_sair.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Botao_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Botao_sairActionPerformed(evt);
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\novo_reg.gif")); // NOI18N
-        jButton1.setToolTipText("Novo Registro");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\novo_reg.gif")); // NOI18N
+        jButton_novo_reg.setText("Novo Registro");
+        jButton_novo_reg.setToolTipText("");
+        jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton_novo_reg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton_novo_reg.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton_novo_reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_novo_regActionPerformed(evt);
             }
         });
 
-        jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_dt_cadastro.setText("Data do Cadastro:");
 
-        tf_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
+
+        jLabel_data.setText("data");
+
+        jLabel_hora.setText("hora");
 
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
@@ -188,9 +233,9 @@ public class Cad_produto extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -221,7 +266,7 @@ public class Cad_produto extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel_conteudo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_conteudo, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
+                                .addComponent(tf_conteudo, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -235,11 +280,11 @@ public class Cad_produto extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel_fornecedor)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tf_fornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+                                .addComponent(tf_fornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel_dt_cadastro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                                .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                                 .addGap(29, 29, 29)
                                 .addComponent(jLabel_dt_ultima_compra)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -248,25 +293,30 @@ public class Cad_produto extends javax.swing.JFrame {
                                 .addComponent(jLabel_dt_ult_venda)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tf_dt_ult_venda, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cb_unidade, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botao_alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cb_unidade, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jButton_novo_reg)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botao_alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(botao_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Botao_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(249, 249, 249))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Botao_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel_data)
+                            .addComponent(jLabel_hora))))
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {tf_dt_ult_compra, tf_dt_ult_venda});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Botao_sair, botao_alterar, botao_excluir, botao_salvar, jButton1});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Botao_sair, botao_alterar, botao_excluir, botao_salvar, jButton_novo_reg});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,20 +358,20 @@ public class Cad_produto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_quant_estoq)
                     .addComponent(tf_quant_estoq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(botao_salvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                        .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_salvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_novo_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
+                .addComponent(jLabel_data)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel_hora))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {tf_dt_ult_compra, tf_dt_ult_venda});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Botao_sair, botao_alterar, botao_excluir, botao_salvar, jButton1});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -336,7 +386,7 @@ public class Cad_produto extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_Botao_sairActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_novo_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_novo_regActionPerformed
          // evento do botão novo/inserir
         tf_cod_produto.setText("");//limpa o campo código
         tf_descricao.setText("");//limpa o campo nome
@@ -360,7 +410,13 @@ public class Cad_produto extends javax.swing.JFrame {
         tf_dt_cadastro.setText(dia+mes+ano);
         tf_cod_produto.requestFocus();//foca o cursor no campo nome
         tf_cod_produto.setEditable(false);//deixa o campo código inativo
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_novo_regActionPerformed
+
+    private void timer1OnTime(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timer1OnTime
+         // evento do timer1 que mostra os segundos
+        mostra_data.le_hora();
+        jLabel_hora.setText(mostra_data.hora);
+    }//GEN-LAST:event_timer1OnTime
 
 
     /**
@@ -381,11 +437,12 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JButton botao_salvar;
     private javax.swing.JComboBox cb_cod_forn;
     private javax.swing.JComboBox cb_unidade;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_novo_reg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_cod_forn;
     private javax.swing.JLabel jLabel_codigo;
     private javax.swing.JLabel jLabel_conteudo;
+    private javax.swing.JLabel jLabel_data;
     private javax.swing.JLabel jLabel_descricao;
     private javax.swing.JLabel jLabel_dt_cadastro;
     private javax.swing.JLabel jLabel_dt_ult_venda;
@@ -393,6 +450,7 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_fabricante;
     private javax.swing.JLabel jLabel_fornecedor;
     private javax.swing.JLabel jLabel_grupo;
+    private javax.swing.JLabel jLabel_hora;
     private javax.swing.JLabel jLabel_quant_estoq;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
@@ -408,6 +466,7 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JTextField tf_fornecedor;
     private javax.swing.JTextField tf_grupo;
     private javax.swing.JTextField tf_quant_estoq;
+    private org.netbeans.examples.lib.timerbean.Timer timer1;
     // End of variables declaration//GEN-END:variables
 
 }
