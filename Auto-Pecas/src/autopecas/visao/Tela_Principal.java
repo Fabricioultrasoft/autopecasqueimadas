@@ -53,6 +53,8 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenu_cadastros = new javax.swing.JMenu();
         jMenuItem_cad_produtos = new javax.swing.JMenuItem();
         jMenuItem_clientes = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu_sair = new javax.swing.JMenu();
 
         timer1.addTimerListener(new org.netbeans.examples.lib.timerbean.TimerListener() {
@@ -118,10 +120,10 @@ public class Tela_Principal extends javax.swing.JFrame {
 
         jLabel_data.setText("data");
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48));
         jLabel1.setText("EstoqueTools");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18));
         jLabel2.setText("Controle de Estoque");
 
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
@@ -143,6 +145,16 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenuItem_clientes.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\cliente.gif")); // NOI18N
         jMenuItem_clientes.setText("Cadastro de Clientes");
         jMenu_cadastros.add(jMenuItem_clientes);
+
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\usuario.jpg")); // NOI18N
+        jMenuItem1.setText("Cadastro de Usuários");
+        jMenu_cadastros.add(jMenuItem1);
+
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\fornecedor2.png")); // NOI18N
+        jMenuItem2.setText("Cadastro de Fornecedores");
+        jMenu_cadastros.add(jMenuItem2);
 
         jMenuBar1.add(jMenu_cadastros);
 
@@ -221,8 +233,8 @@ public class Tela_Principal extends javax.swing.JFrame {
     private void jButton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_sairActionPerformed
         // Evento do botão sair
         try {
-            String nome = "Tem certeza que deseja sair do sistema?";
-            int opcao_escolhida = JOptionPane.showConfirmDialog(null, nome, "Sair", JOptionPane.YES_NO_OPTION);
+            String pergunta = "Tem certeza que deseja sair do sistema?";
+            int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "Sair", JOptionPane.YES_NO_OPTION);
             if(opcao_escolhida == JOptionPane.YES_OPTION){
                 System.exit(0);
             }
@@ -261,6 +273,8 @@ public class Tela_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_data;
     private javax.swing.JLabel jLabel_hora;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem_cad_produtos;
     private javax.swing.JMenuItem jMenuItem_clientes;
     private javax.swing.JMenu jMenu_cadastros;

@@ -6,10 +6,12 @@
 /*
  * Login.java
  *
- * Created on 12/08/2010, 14:45:45
+ * Created on 13/08/2010, 09:52:38
  */
 
 package autopecas.visao;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,27 +38,30 @@ public class Login extends javax.swing.JFrame {
         tf_usuario = new javax.swing.JTextField();
         tf_senha = new javax.swing.JPasswordField();
         jButton_login = new javax.swing.JButton();
-        jButton_cancelar = new javax.swing.JButton();
+        jButton_sair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Auto Peças - Login");
+        setTitle("Login");
 
-        jLabel_usuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel_usuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel_usuario.setText("Usuário:");
 
-        jLabel_senha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel_senha.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel_senha.setText("Senha:");
 
-        tf_usuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
-        tf_senha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-
+        jButton_login.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton_login.setText("Login");
-
-        jButton_cancelar.setText("Cancelar");
-        jButton_cancelar.addActionListener(new java.awt.event.ActionListener() {
+        jButton_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_cancelarActionPerformed(evt);
+                jButton_loginActionPerformed(evt);
+            }
+        });
+
+        jButton_sair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton_sair.setText("Sair");
+        jButton_sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_sairActionPerformed(evt);
             }
         });
 
@@ -67,54 +72,80 @@ public class Login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jButton_login)
+                        .addGap(36, 36, 36)
+                        .addComponent(jButton_sair))
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel_usuario)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel_senha)
-                                .addGap(18, 18, 18)
-                                .addComponent(tf_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jButton_login, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton_cancelar)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tf_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_cancelar, jButton_login});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {tf_senha, tf_usuario});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel_senha, jLabel_usuario});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_login, jButton_sair});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_usuario)
                     .addComponent(tf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_senha)
                     .addComponent(tf_senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_login)
-                    .addComponent(jButton_cancelar))
+                    .addComponent(jButton_sair))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton_cancelar, jButton_login});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {tf_senha, tf_usuario});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel_senha, jLabel_usuario});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton_login, jButton_sair});
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-408)/2, (screenSize.height-201)/2, 408, 201);
+        setBounds((screenSize.width-395)/2, (screenSize.height-178)/2, 395, 178);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancelarActionPerformed
-        //evento do botão cancelar
+    private void jButton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_sairActionPerformed
+        // Evento do botão sair
         System.exit(0);
-    }//GEN-LAST:event_jButton_cancelarActionPerformed
+    }//GEN-LAST:event_jButton_sairActionPerformed
+
+    private void jButton_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_loginActionPerformed
+        // evento do botao login
+        String login = "caitano", senha = "123";
+        try{
+           if(login.equals(tf_usuario.getText()) && senha.equals(tf_senha.getText())){
+            //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+            }else{
+            //continua na mesma tela
+               JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos!");
+        }
+
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Erro ao tentar fazer login! Erro:"+erro);
+        }
+    }//GEN-LAST:event_jButton_loginActionPerformed
 
     /**
     * @param args the command line arguments
@@ -128,8 +159,8 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_cancelar;
     private javax.swing.JButton jButton_login;
+    private javax.swing.JButton jButton_sair;
     private javax.swing.JLabel jLabel_senha;
     private javax.swing.JLabel jLabel_usuario;
     private javax.swing.JPasswordField tf_senha;
