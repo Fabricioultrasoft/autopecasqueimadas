@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
  * @author Kelly
  */
 public class Login extends javax.swing.JFrame {
+    private int Login;
 
     /** Creates new form Login */
     public Login() {
@@ -41,12 +42,12 @@ public class Login extends javax.swing.JFrame {
         jButton_sair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Login");
+        setTitle("Auto Peças - Login");
 
-        jLabel_usuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_usuario.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_usuario.setText("Usuário:");
 
-        jLabel_senha.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_senha.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_senha.setText("Senha:");
 
         jButton_login.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -56,8 +57,13 @@ public class Login extends javax.swing.JFrame {
                 jButton_loginActionPerformed(evt);
             }
         });
+        jButton_login.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton_loginKeyPressed(evt);
+            }
+        });
 
-        jButton_sair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton_sair.setFont(new java.awt.Font("Arial", 0, 14));
         jButton_sair.setText("Sair");
         jButton_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,20 +138,42 @@ public class Login extends javax.swing.JFrame {
     private void jButton_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_loginActionPerformed
         // evento do botao login
         String login = "caitano", senha = "123";
+        String login2 = "ruan", senha2 = "1234";
+        String login3 = "robson", senha3 = "12345";
         try{
-           if(login.equals(tf_usuario.getText()) && senha.equals(tf_senha.getText())){
-            //abre a tela principal
-               new Tela_Principal().show();
-               dispose();
-            }else{
-            //continua na mesma tela
-               JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos!");
+           switch (Login){
+            case 0: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
+            case 1: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
+            case 2: login2.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
+            case 3: senha2.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
+            case 4: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
+            case 5: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
         }
 
         }catch(Exception erro){
             JOptionPane.showMessageDialog(null, "Erro ao tentar fazer login! Erro:"+erro);
         }
     }//GEN-LAST:event_jButton_loginActionPerformed
+
+    private void jButton_loginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton_loginKeyPressed
+         // evento do botao login om o teclado
+        String login = "caitano", senha = "123";
+        String login2 = "ruan", senha2 = "1234";
+        String login3 = "robson", senha3 = "12345";
+        try{
+           switch (Login){
+            case 0: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
+            case 1: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
+            case 2: login2.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
+            case 3: senha2.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
+            case 4: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
+            case 5: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
+        }
+
+        }catch(Exception erro){
+            JOptionPane.showMessageDialog(null, "Erro ao tentar fazer login! Erro:"+erro);
+        }
+    }//GEN-LAST:event_jButton_loginKeyPressed
 
     /**
     * @param args the command line arguments
@@ -168,3 +196,4 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 }
+

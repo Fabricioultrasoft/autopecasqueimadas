@@ -312,7 +312,6 @@ public class Entrada_material extends javax.swing.JFrame {
         jLabel_hora.setText(mostra_data.hora);
     }//GEN-LAST:event_timer1OnTime
 
-
     /**
     * @param args the command line arguments
     */
