@@ -11,6 +11,7 @@
 
 package autopecas.visao;
 
+import autopecas.logica.data;
 import java.util.Date;
 import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;

@@ -11,6 +11,7 @@
 
 package autopecas.visao;
 
+import autopecas.logica.data;
 import javax.swing.JOptionPane;
 
 /**
