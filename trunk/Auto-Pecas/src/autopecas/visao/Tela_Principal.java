@@ -64,7 +64,7 @@ public class Tela_Principal extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Auto Peças");
+        setTitle("Auto Peças - Controle de Estoque");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -146,12 +146,12 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenuItem_clientes.setText("Cadastro de Clientes");
         jMenu_cadastros.add(jMenuItem_clientes);
 
-        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\usuario.jpg")); // NOI18N
         jMenuItem1.setText("Cadastro de Usuários");
         jMenu_cadastros.add(jMenuItem1);
 
-        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\fornecedor2.png")); // NOI18N
         jMenuItem2.setText("Cadastro de Fornecedores");
         jMenu_cadastros.add(jMenuItem2);
