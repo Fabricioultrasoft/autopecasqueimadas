@@ -136,42 +136,54 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_sairActionPerformed
 
     private void jButton_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_loginActionPerformed
-        // evento do botao login
+       // evento do botao login
         String login = "caitano", senha = "123";
         String login2 = "ruan", senha2 = "1234";
         String login3 = "robson", senha3 = "12345";
-        try{
-           switch (Login){
-            case 0: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
-            case 1: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
-            case 2: login2.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
-            case 3: senha2.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
-            case 4: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
-            case 5: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
-        }
-
-        }catch(Exception erro){
-            JOptionPane.showMessageDialog(null, "Erro ao tentar fazer login! Erro:"+erro);
+        if(login.equals(tf_usuario.getText()) && senha.equals(tf_senha.getText())){
+           //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+           }
+          else if (login2.equals(tf_usuario.getText()) && senha2.equals(tf_senha.getText())){
+          //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+          }
+          else if (login3.equals(tf_usuario.getText()) && senha3.equals(tf_senha.getText())){
+               //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+           }
+            else{
+            //continua na mesma tela
+               JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos!");
         }
     }//GEN-LAST:event_jButton_loginActionPerformed
 
     private void jButton_loginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton_loginKeyPressed
-         // evento do botao login om o teclado
+         // evento do botao login
         String login = "caitano", senha = "123";
         String login2 = "ruan", senha2 = "1234";
         String login3 = "robson", senha3 = "12345";
-        try{
-           switch (Login){
-            case 0: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
-            case 1: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
-            case 2: login2.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
-            case 3: senha2.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
-            case 4: login.equals(tf_usuario.getText());new Tela_Principal().show();dispose();
-            case 5: senha.equals(tf_senha.getText()); new Tela_Principal().show();dispose();
-        }
-
-        }catch(Exception erro){
-            JOptionPane.showMessageDialog(null, "Erro ao tentar fazer login! Erro:"+erro);
+        if(login.equals(tf_usuario.getText()) && senha.equals(tf_senha.getText())){
+           //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+           }
+          else if (login2.equals(tf_usuario.getText()) && senha2.equals(tf_senha.getText())){
+          //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+          }
+          else if (login3.equals(tf_usuario.getText()) && senha3.equals(tf_senha.getText())){
+               //abre a tela principal
+               new Tela_Principal().show();
+               dispose();
+           }
+            else{
+            //continua na mesma tela
+               JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos!");
         }
     }//GEN-LAST:event_jButton_loginKeyPressed
 
