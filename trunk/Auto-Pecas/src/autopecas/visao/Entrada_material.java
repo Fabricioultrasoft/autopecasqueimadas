@@ -83,7 +83,7 @@ public class Entrada_material extends javax.swing.JFrame {
 
         tf_num_NF.setFont(new java.awt.Font("Arial", 0, 14));
 
-        jLabel_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
+        jLabel_cod_forn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel_cod_forn.setText("Cód. Fornecedor");
 
         cb_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
@@ -123,7 +123,7 @@ public class Entrada_material extends javax.swing.JFrame {
             }
         });
 
-        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12));
+        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\novo_reg.gif")); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
@@ -136,8 +136,8 @@ public class Entrada_material extends javax.swing.JFrame {
             }
         });
 
-        jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
-        jLabel_dt_cadastro.setText("Data do Entrada:");
+        jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_dt_cadastro.setText("Data da Entrada:");
 
         tf_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
 
@@ -163,7 +163,15 @@ public class Entrada_material extends javax.swing.JFrame {
             new String [] {
                 "Cód Produto", "Descrição", "Quantidade", "Preço"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getColumn(0).setMinWidth(75);
         jTable1.getColumnModel().getColumn(0).setPreferredWidth(75);
@@ -223,7 +231,7 @@ public class Entrada_material extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addGap(65, 65, 65)
                         .addComponent(jButton_novo_reg)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -254,18 +262,20 @@ public class Entrada_material extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_dt_cadastro)
                     .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(98, 98, 98)
+                .addGap(99, 99, 99)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botao_salvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton_novo_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(jLabel_data)
                 .addGap(4, 4, 4)
                 .addComponent(jLabel_hora))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botao_salvar, jButton_novo_reg});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
