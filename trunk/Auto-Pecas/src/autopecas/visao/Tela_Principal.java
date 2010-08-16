@@ -55,7 +55,7 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenuItem_cad_produtos = new javax.swing.JMenuItem();
         jMenuItem_clientes = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem_cad_fornecedor = new javax.swing.JMenuItem();
         jMenu_sair = new javax.swing.JMenu();
 
         timer1.addTimerListener(new org.netbeans.examples.lib.timerbean.TimerListener() {
@@ -132,7 +132,7 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenu_cadastros.setBackground(new java.awt.Color(0, 204, 0));
         jMenu_cadastros.setText("Cadastros");
 
-        jMenuItem_cad_produtos.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_cad_produtos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem_cad_produtos.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\produto.gif")); // NOI18N
         jMenuItem_cad_produtos.setText("Cadastro de Produtos");
         jMenuItem_cad_produtos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -152,10 +152,15 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenuItem1.setText("Cadastro de Usuários");
         jMenu_cadastros.add(jMenuItem1);
 
-        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14));
-        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\fornecedor2.png")); // NOI18N
-        jMenuItem2.setText("Cadastro de Fornecedores");
-        jMenu_cadastros.add(jMenuItem2);
+        jMenuItem_cad_fornecedor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem_cad_fornecedor.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\fornecedor2.png")); // NOI18N
+        jMenuItem_cad_fornecedor.setText("Cadastro de Fornecedores");
+        jMenuItem_cad_fornecedor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem_cad_fornecedorMousePressed(evt);
+            }
+        });
+        jMenu_cadastros.add(jMenuItem_cad_fornecedor);
 
         jMenuBar1.add(jMenu_cadastros);
 
@@ -254,6 +259,11 @@ public class Tela_Principal extends javax.swing.JFrame {
         new Entrada_material().show();
     }//GEN-LAST:event_jButton_produtosActionPerformed
 
+    private void jMenuItem_cad_fornecedorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_cad_fornecedorMousePressed
+        // evento do botao jMenuItem_cad_fornecedor
+        new Cad_fornecedor().show();
+    }//GEN-LAST:event_jMenuItem_cad_fornecedorMousePressed
+
     /**
     * @param args the command line arguments
     */
@@ -275,7 +285,7 @@ public class Tela_Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_hora;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem_cad_fornecedor;
     private javax.swing.JMenuItem jMenuItem_cad_produtos;
     private javax.swing.JMenuItem jMenuItem_clientes;
     private javax.swing.JMenu jMenu_cadastros;
