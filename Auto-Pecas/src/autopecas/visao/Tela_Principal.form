@@ -58,7 +58,7 @@
                 <Property name="text" type="java.lang.String" value="Cadastro de Usu&#xe1;rios"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_cad_fornecedor">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
@@ -68,6 +68,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Fornecedores"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem_cad_fornecedorMousePressed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
