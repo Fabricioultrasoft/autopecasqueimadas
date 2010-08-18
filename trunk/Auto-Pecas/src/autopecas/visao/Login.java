@@ -163,7 +163,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf_usuario;
     // End of variables declaration//GEN-END:variables
 
-    public void validaUsusario(){
+    private void validaUsusario(){
         // evento do botao login
         String login = "caitano", senha = "123";
         String login2 = "ruan", senha2 = "1234";

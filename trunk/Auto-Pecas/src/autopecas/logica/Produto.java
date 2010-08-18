@@ -6,12 +6,18 @@
 package autopecas.logica;
 
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author Ruan
  */
+@Entity
 public class Produto {
+    @Id
     private int codigoProduto;
     private String nomeProduto;
     private String unidadeProduto;
@@ -28,11 +34,15 @@ public class Produto {
     private int codigoFabricaProduto;
     private int ultimaNotaProduto;
     private int codigoFornecedor;
+    @Temporal(TemporalType.DATE)
     private Date ultimaCompraProduto;
     private int ultimaQuantidadeProduto;
+    @Temporal(TemporalType.DATE)
     private Date ultimoMovimentoProduto;
+    @Temporal(TemporalType.DATE)
     private Date ultimaVendaProduto;
     private int estoqueProduto;
+    @Temporal(TemporalType.DATE)
     private Date dataCadastro;
 
     public String getAlfaProduto() {
