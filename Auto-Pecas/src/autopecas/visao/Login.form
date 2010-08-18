@@ -50,7 +50,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="94" max="32767" attributes="0"/>
+              <EmptySpace pref="86" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -67,7 +67,7 @@
                   <Component id="jLabel_senha" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tf_senha" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton_login" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton_sair" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
