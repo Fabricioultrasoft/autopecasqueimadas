@@ -90,13 +90,13 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel_contato1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="tf_contato1" linkSize="7" min="-2" pref="111" max="-2" attributes="0"/>
+                                      <Component id="tf_contato1" linkSize="8" min="-2" pref="124" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="205" pref="205" max="205" attributes="0"/>
                                       <Component id="jLabel_contato2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="tf_contato2" linkSize="7" min="-2" pref="112" max="-2" attributes="0"/>
+                                      <Component id="tf_contato2" linkSize="8" min="-2" pref="124" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -109,7 +109,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel_email" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="tf_email" pref="271" max="32767" attributes="0"/>
+                                      <Component id="tf_email" pref="259" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -437,7 +437,7 @@
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JFormattedTextField(formatoFone);"/>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="try  {    formatoFone = new MaskFormatter(&quot;(0xx)####-####&quot;);  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, &quot;N&#xe3;o foi poss&#xed;vel setar a m&#xe1;scara em formatoFone, erro = &quot;+ erro);  }"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="try  {    formatoFone = new MaskFormatter(&quot;(0xx##)####-####&quot;);  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, &quot;N&#xe3;o foi poss&#xed;vel setar a m&#xe1;scara em formatoFone, erro = &quot;+ erro);  }"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_contato1">
@@ -456,7 +456,7 @@
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new JFormattedTextField(formatoFone);"/>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="try  {    &#xd;     formatoFone = new MaskFormatter(&quot;(0xx)####-####&quot;);  &#xd;     }  catch(Exception erro)  {      &#xd;     JOptionPane.showMessageDialog(null, &quot;N&#xe3;o foi poss&#xed;vel setar a m&#xe1;scara em formatoFone, erro = &quot;+ erro);  }"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="try  {    &#xd;     formatoFone = new MaskFormatter(&quot;(0xx##)####-####&quot;);  &#xd;     }  catch(Exception erro)  {      &#xd;     JOptionPane.showMessageDialog(null, &quot;N&#xe3;o foi poss&#xed;vel setar a m&#xe1;scara em formatoFone, erro = &quot;+ erro);  }"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="botao_salvar">

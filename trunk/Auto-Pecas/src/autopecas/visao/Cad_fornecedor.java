@@ -72,11 +72,11 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         tf_nome_fantasia = new javax.swing.JTextField();
         cb_uf = new javax.swing.JComboBox();
         jLabel_uf = new javax.swing.JLabel();
-        try  {    formatoFone = new MaskFormatter("(0xx)####-####");  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, "Não foi possível setar a máscara em formatoFone, erro = "+ erro);  }
+        try  {    formatoFone = new MaskFormatter("(0xx##)####-####");  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, "Não foi possível setar a máscara em formatoFone, erro = "+ erro);  }
         tf_contato2 = new JFormattedTextField(formatoFone);
         jLabel_contato1 = new javax.swing.JLabel();
         try  {    
-     formatoFone = new MaskFormatter("(0xx)####-####");  
+     formatoFone = new MaskFormatter("(0xx##)####-####");  
      }  catch(Exception erro)  {      
      JOptionPane.showMessageDialog(null, "Não foi possível setar a máscara em formatoFone, erro = "+ erro);  }
         tf_contato1 = new JFormattedTextField(formatoFone);
@@ -125,7 +125,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         jLabel_cgc_cnpj.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_cgc_cnpj.setText("CGC/CNPJ:");
 
-        jLabel_insc_estadual.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_insc_estadual.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_insc_estadual.setText("Insc. Est");
 
         tf_insc_estadual.setFont(new java.awt.Font("Arial", 0, 14));
@@ -156,12 +156,12 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         jLabel_uf.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_uf.setText("UF:");
 
-        tf_contato2.setFont(new java.awt.Font("Arial", 0, 14));
+        tf_contato2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jLabel_contato1.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_contato1.setText("Contato I:");
 
-        tf_contato1.setFont(new java.awt.Font("Arial", 0, 14));
+        tf_contato1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         botao_salvar.setFont(new java.awt.Font("Arial", 0, 12));
         botao_salvar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\GRAVAR2.jpg")); // NOI18N
@@ -284,12 +284,12 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addComponent(jLabel_contato1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_contato1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(tf_contato1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addGap(205, 205, 205)
                                         .addComponent(jLabel_contato2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_contato2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(tf_contato2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -299,7 +299,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel_email)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tf_email, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE))))
+                                        .addComponent(tf_email, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
