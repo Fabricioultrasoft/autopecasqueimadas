@@ -11,7 +11,12 @@
 
 package autopecas.visao;
 
+import autopecas.logica.Produto;
+import autopecas.logica.ProdutoFacade;
 import autopecas.logica.data;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
@@ -100,7 +105,7 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_codigo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_codigo.setText("Código:");
 
-        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14));
+        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jLabel_descricao.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_descricao.setText("Descrição:");
@@ -156,29 +161,31 @@ public class Cad_produto extends javax.swing.JFrame {
 
         tf_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14));
 
-        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12));
-        botao_salvar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\GRAVAR2.jpg")); // NOI18N
+        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
+        botao_salvar.setEnabled(false);
         botao_salvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_salvar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         botao_salvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        botao_salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao_salvarActionPerformed(evt);
+            }
+        });
 
-        botao_alterar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\alterar_dados.jpg")); // NOI18N
         botao_alterar.setText("Alterar Registro");
         botao_alterar.setToolTipText("");
         botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        botao_excluir.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\EXCLUIR.jpg")); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        Botao_sair.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\SAIR.jpg")); // NOI18N
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -190,8 +197,7 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12));
-        jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\novo_reg.gif")); // NOI18N
+        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
         jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -411,6 +417,8 @@ public class Cad_produto extends javax.swing.JFrame {
         tf_dt_cadastro.setText(dia+mes+ano);
         tf_descricao.requestFocus();//foca o cursor no campo descrição
         tf_cod_produto.setEditable(false);//deixa o campo código inativo
+        botao_salvar.setEnabled(true);
+        
     }//GEN-LAST:event_jButton_novo_regActionPerformed
 
     private void timer1OnTime(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timer1OnTime
@@ -419,6 +427,28 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_hora.setText(mostra_data.hora);
     }//GEN-LAST:event_timer1OnTime
 
+    private void botao_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_salvarActionPerformed
+        // TODO add your handling code here:
+        Produto p = new Produto();
+        p.setNomeProduto(tf_descricao.getText());
+        p.setFabricanteProduto(tf_fabricante.getText());
+        try { 
+         
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
+        Calendar cal = Calendar.getInstance(); 
+        cal.setTime(sdf.parse(tf_dt_cadastro.getText())); 
+         p.setDataCadastro(cal);
+        } catch (ParseException e) { 
+        e.printStackTrace(); 
+        }
+        ProdutoFacade facade = new ProdutoFacade();
+        facade.criarProduto(p);
+
+
+
+       
+
+    }//GEN-LAST:event_botao_salvarActionPerformed
 
     /**
     * @param args the command line arguments
