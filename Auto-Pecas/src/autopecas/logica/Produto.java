@@ -5,7 +5,7 @@
 
 package autopecas.logica;
 
-import java.util.Date;
+import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
@@ -17,8 +17,8 @@ import javax.persistence.TemporalType;
  */
 @Entity
 public class Produto {
-    @Id
-    private int codigoProduto;
+   @Id
+    private  int codigoProduto;
     private String nomeProduto;
     private String unidadeProduto;
     private String referenciaProduto;
@@ -35,15 +35,15 @@ public class Produto {
     private int ultimaNotaProduto;
     private int codigoFornecedor;
     @Temporal(TemporalType.DATE)
-    private Date ultimaCompraProduto;
+    private Calendar ultimaCompraProduto;
     private int ultimaQuantidadeProduto;
     @Temporal(TemporalType.DATE)
-    private Date ultimoMovimentoProduto;
+    private Calendar ultimoMovimentoProduto;
     @Temporal(TemporalType.DATE)
-    private Date ultimaVendaProduto;
+    private Calendar ultimaVendaProduto;
     private int estoqueProduto;
     @Temporal(TemporalType.DATE)
-    private Date dataCadastro;
+    private Calendar dataCadastro;
 
     public String getAlfaProduto() {
         return alfaProduto;
@@ -108,10 +108,10 @@ public class Produto {
     public void setCustoProduto(double custoProduto) {
         this.custoProduto = custoProduto;
     }
-    public Date getDataCadastro(){
+    public Calendar getDataCadastro(){
         return dataCadastro;
     }
-    public void setDataCadastro(Date dataCadastro){
+    public void setDataCadastro(Calendar dataCadastro){
         this.dataCadastro = dataCadastro;
     }
 
@@ -163,11 +163,11 @@ public class Produto {
         this.referenciaProduto = referenciaProduto;
     }
 
-    public Date getUltimaCompraProduto() {
+    public Calendar getUltimaCompraProduto() {
         return ultimaCompraProduto;
     }
 
-    public void setUltimaCompraProduto(Date ultimaCompraProduto) {
+    public void setUltimaCompraProduto(Calendar ultimaCompraProduto) {
         this.ultimaCompraProduto = ultimaCompraProduto;
     }
 
@@ -187,19 +187,19 @@ public class Produto {
         this.ultimaQuantidadeProduto = ultimaQuantidadeProduto;
     }
 
-    public Date getUltimaVendaProduto() {
+    public Calendar getUltimaVendaProduto() {
         return ultimaVendaProduto;
     }
 
-    public void setUltimaVendaProduto(Date ultimaVendaProduto) {
+    public void setUltimaVendaProduto(Calendar ultimaVendaProduto) {
         this.ultimaVendaProduto = ultimaVendaProduto;
     }
 
-    public Date getUltimoMovimentoProduto() {
+    public Calendar getUltimoMovimentoProduto() {
         return ultimoMovimentoProduto;
     }
 
-    public void setUltimoMovimentoProduto(Date ultimoMovimentoProduto) {
+    public void setUltimoMovimentoProduto(Calendar ultimoMovimentoProduto) {
         this.ultimoMovimentoProduto = ultimoMovimentoProduto;
     }
 
