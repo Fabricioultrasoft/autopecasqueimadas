@@ -7,6 +7,8 @@ package autopecas.logica;
 
 import java.util.Calendar;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -18,6 +20,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class Produto {
    @Id
+   @GeneratedValue(strategy=GenerationType.AUTO)
     private  int codigoProduto;
     private String nomeProduto;
     private String unidadeProduto;

@@ -14,6 +14,7 @@ package autopecas.visao;
 import autopecas.logica.Produto;
 import autopecas.logica.ProdutoFacade;
 import autopecas.logica.data;
+import autopecas.persistencia.ProdutoDao;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -28,6 +29,7 @@ import javax.swing.text.MaskFormatter;
  */
 public class Cad_produto extends javax.swing.JFrame {
 
+    private Produto p;//referencia que vai referenciar os Objetos produtos
     data mostra_data;//variavel que vai chamar os metodos da data e hora
     MaskFormatter formatoPreco, formatoCnpj, formatoCep, formatoFone, formatoData;
     /** Creates new form Cad_produto */
@@ -429,7 +431,7 @@ public class Cad_produto extends javax.swing.JFrame {
 
     private void botao_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_salvarActionPerformed
         // TODO add your handling code here:
-        Produto p = new Produto();
+        p = new Produto();
         p.setNomeProduto(tf_descricao.getText());
         p.setFabricanteProduto(tf_fabricante.getText());
         try { 
@@ -443,6 +445,9 @@ public class Cad_produto extends javax.swing.JFrame {
         }
         ProdutoFacade facade = new ProdutoFacade();
         facade.criarProduto(p);
+
+
+        
 
 
 
@@ -500,4 +505,5 @@ public class Cad_produto extends javax.swing.JFrame {
     private org.netbeans.examples.lib.timerbean.Timer timer1;
     // End of variables declaration//GEN-END:variables
 
+    
 }
