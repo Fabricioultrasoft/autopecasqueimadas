@@ -16,13 +16,12 @@ public class ProdutoFacade {
     
     
     public ProdutoFacade(){
-    FonteDeDados dados = new FonteDeDados();
-    dados.criarBanco();
+    //FonteDeDados dados = new FonteDeDados();
+    //dados.criarBanco();
 
     }
     public void criarProduto(Produto p){
     ProdutoDao dao = new ProdutoDao();
-    
     dao.salvarProduto(p);
         
        
