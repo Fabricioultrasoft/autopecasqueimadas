@@ -28,7 +28,7 @@
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\botoes\produto.gif"/>
+                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\produto.gif"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Produtos"/>
               </Properties>
@@ -36,26 +36,15 @@
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem_cad_produtosMousePressed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_clientes">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="14" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\botoes\cliente.gif"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Cadastro de Clientes"/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\botoes\usuario.jpg"/>
+                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\cliente.gif"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Cadastro de Usu&#xe1;rios"/>
+                <Property name="text" type="java.lang.String" value="Cadastro de Clientes"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_cad_fornecedor">
@@ -64,12 +53,37 @@
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\botoes\fornecedor2.png"/>
+                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\fornecedor2.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Fornecedores"/>
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem_cad_fornecedorMousePressed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\icone_cadastro_cliente.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cadastro de Funcion&#xe1;rios"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_sair">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Documents and Settings\Kelly\Meus documentos\NetBeansProjects\Auto-Pecas\imagens\sair2.gif"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sair"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem_sairMousePressed"/>
               </Events>
             </MenuItem>
           </SubComponents>
