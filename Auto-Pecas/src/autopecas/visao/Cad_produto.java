@@ -282,9 +282,9 @@ public class Cad_produto extends javax.swing.JFrame {
         jTable1.getColumnModel().getColumn(3).setMinWidth(200);
         jTable1.getColumnModel().getColumn(3).setPreferredWidth(200);
         jTable1.getColumnModel().getColumn(3).setMaxWidth(200);
-        jTable1.getColumnModel().getColumn(4).setMinWidth(60);
-        jTable1.getColumnModel().getColumn(4).setPreferredWidth(60);
-        jTable1.getColumnModel().getColumn(4).setMaxWidth(60);
+        jTable1.getColumnModel().getColumn(4).setMinWidth(70);
+        jTable1.getColumnModel().getColumn(4).setPreferredWidth(70);
+        jTable1.getColumnModel().getColumn(4).setMaxWidth(70);
 
         jButton5.setFont(new java.awt.Font("Arial", 0, 14));
         jButton5.setText("Pesquisar");
