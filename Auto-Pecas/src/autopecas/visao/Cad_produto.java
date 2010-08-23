@@ -73,12 +73,6 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_fornecedor = new javax.swing.JLabel();
         tf_fornecedor = new javax.swing.JTextField();
         cb_cod_forn = new javax.swing.JComboBox();
-        jLabel_dt_ultima_compra = new javax.swing.JLabel();
-        try  {    formatoData = new MaskFormatter("##/##/####");  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, "Não foi possível setar a máscara em formatoData, erro = "+ erro);  }
-        tf_dt_ult_compra = new JFormattedTextField(formatoData);
-        jLabel_dt_ult_venda = new javax.swing.JLabel();
-        try  {    formatoData = new MaskFormatter("##/##/####");  }  catch(Exception erro)  {      JOptionPane.showMessageDialog(null, "Não foi possível setar a máscara em formatoData, erro = "+ erro);  }
-        tf_dt_ult_venda = new JFormattedTextField(formatoData);
         jLabel_quant_estoq = new javax.swing.JLabel();
         tf_quant_estoq = new javax.swing.JTextField();
         botao_salvar = new javax.swing.JButton();
@@ -91,8 +85,14 @@ public class Cad_produto extends javax.swing.JFrame {
         tf_dt_cadastro = new JFormattedTextField(formatoData);
         jLabel_data = new javax.swing.JLabel();
         jLabel_hora = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton5 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
         jMenu_sair = new javax.swing.JMenu();
 
         timer1.addTimerListener(new org.netbeans.examples.lib.timerbean.TimerListener() {
@@ -107,7 +107,7 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_codigo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_codigo.setText("Código:");
 
-        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_descricao.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_descricao.setText("Descrição:");
@@ -148,22 +148,23 @@ public class Cad_produto extends javax.swing.JFrame {
         cb_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
         cb_cod_forn.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel_dt_ultima_compra.setFont(new java.awt.Font("Arial", 0, 14));
-        jLabel_dt_ultima_compra.setText("Ultima Compra:");
-
-        tf_dt_ult_compra.setFont(new java.awt.Font("Arial", 0, 14));
-
-        jLabel_dt_ult_venda.setFont(new java.awt.Font("Arial", 0, 14));
-        jLabel_dt_ult_venda.setText("Ultima Venda:");
-
-        tf_dt_ult_venda.setFont(new java.awt.Font("Arial", 0, 14));
-
         jLabel_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_quant_estoq.setText("Quant. em Estoque:");
 
         tf_quant_estoq.setFont(new java.awt.Font("Arial", 0, 14));
 
-        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_salvar.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("file:/C:/Documents and Settings/Kelly/Meus documentos/NetBeansProjects/Auto-Pecas/imagens/GRAVAR3.jpg")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
         botao_salvar.setEnabled(false);
@@ -176,18 +177,34 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
+        botao_alterar.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_alterar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\alterar_dados2.jpg")); // NOI18N
         botao_alterar.setText("Alterar Registro");
         botao_alterar.setToolTipText("");
         botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        botao_excluir.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_excluir.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\EXCLUIR2.jpg")); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        Botao_sair.setFont(new java.awt.Font("Arial", 0, 12));
+        Botao_sair.setIcon(new javax.swing.JLabel() {
+            public javax.swing.Icon getIcon() {
+                try {
+                    return new javax.swing.ImageIcon(
+                        new java.net.URL("file:/C:/Documents and Settings/Kelly/Meus documentos/NetBeansProjects/Auto-Pecas/imagens/SAIR2.jpg")
+                    );
+                } catch (java.net.MalformedURLException e) {
+                }
+                return null;
+            }
+        }.getIcon());
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -199,7 +216,8 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12));
+        jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\novo_reg.gif")); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
         jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -220,11 +238,58 @@ public class Cad_produto extends javax.swing.JFrame {
 
         jLabel_hora.setText("hora");
 
-        jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\primeiro_reg.gif")); // NOI18N
 
-        jMenu1.setBackground(new java.awt.Color(0, 204, 51));
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\anterior.gif")); // NOI18N
+        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\proximo.gif")); // NOI18N
+        jButton3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\ultimo_reg.gif")); // NOI18N
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Descrição", "Fabricante", "Fornecedor", "Quant."
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+        jTable1.getColumnModel().getColumn(0).setMinWidth(70);
+        jTable1.getColumnModel().getColumn(0).setPreferredWidth(70);
+        jTable1.getColumnModel().getColumn(0).setMaxWidth(70);
+        jTable1.getColumnModel().getColumn(1).setMinWidth(250);
+        jTable1.getColumnModel().getColumn(1).setPreferredWidth(250);
+        jTable1.getColumnModel().getColumn(1).setMaxWidth(250);
+        jTable1.getColumnModel().getColumn(2).setMinWidth(200);
+        jTable1.getColumnModel().getColumn(2).setPreferredWidth(200);
+        jTable1.getColumnModel().getColumn(2).setMaxWidth(200);
+        jTable1.getColumnModel().getColumn(3).setMinWidth(200);
+        jTable1.getColumnModel().getColumn(3).setPreferredWidth(200);
+        jTable1.getColumnModel().getColumn(3).setMaxWidth(200);
+        jTable1.getColumnModel().getColumn(4).setMinWidth(60);
+        jTable1.getColumnModel().getColumn(4).setPreferredWidth(60);
+        jTable1.getColumnModel().getColumn(4).setMaxWidth(60);
+
+        jButton5.setFont(new java.awt.Font("Arial", 0, 14));
+        jButton5.setText("Pesquisar");
+
+        jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
         jMenu_sair.setBackground(new java.awt.Color(0, 204, 51));
         jMenu_sair.setText("Sair");
@@ -242,103 +307,114 @@ public class Cad_produto extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLabel_dt_cadastro)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel_cod_forn)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cb_cod_forn, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel_fornecedor)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(tf_fornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGap(262, 262, 262)
+                        .addComponent(jLabel_quant_estoq)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_quant_estoq, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel_codigo)
-                                                .addGap(5, 5, 5)
-                                                .addComponent(tf_cod_produto, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel_grupo)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(tf_grupo)))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel_descricao)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(tf_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel_fabricante)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(tf_fabricante))))
+                                        .addComponent(jLabel_grupo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(tf_grupo))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
+                                        .addComponent(jLabel_codigo)
+                                        .addGap(5, 5, 5)
+                                        .addComponent(tf_cod_produto, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel_descricao)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_classificacao)))
+                                        .addComponent(tf_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel_fabricante)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tf_fabricante)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tf_classificacao, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+                                .addGap(12, 12, 12)
                                 .addComponent(jLabel_conteudo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_conteudo, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel_cod_forn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cb_cod_forn, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel_quant_estoq)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_quant_estoq)))
+                                .addComponent(tf_conteudo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel_fornecedor)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tf_fornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel_dt_cadastro)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                .addGap(29, 29, 29)
-                                .addComponent(jLabel_dt_ultima_compra)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_dt_ult_compra, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                .addGap(25, 25, 25)
-                                .addComponent(jLabel_dt_ult_venda)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_dt_ult_venda, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cb_unidade, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cb_unidade, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(2, 2, 2)))
+                        .addGap(50, 50, 50)))
+                .addGap(0, 0, 0))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel_data)
+                .addContainerGap(768, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel_hora)
+                .addContainerGap(768, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jButton_novo_reg)
+                        .addComponent(jButton_novo_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(botao_alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botao_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(10, 10, 10)
+                        .addComponent(botao_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
                         .addComponent(Botao_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_data)
-                            .addComponent(jLabel_hora))))
-                .addContainerGap())
+                        .addGap(132, 132, 132)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton4)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {tf_dt_ult_compra, tf_dt_ult_venda});
-
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Botao_sair, botao_alterar, botao_excluir, botao_salvar, jButton_novo_reg});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_cod_produto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_codigo)
                     .addComponent(jLabel_descricao)
                     .addComponent(tf_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_conteudo)
-                    .addComponent(tf_conteudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cb_unidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton5))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_grupo)
@@ -348,7 +424,10 @@ public class Cad_produto extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(tf_classificacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_classificacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_unidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_conteudo)
+                    .addComponent(tf_conteudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_cod_forn)
@@ -357,30 +436,44 @@ public class Cad_produto extends javax.swing.JFrame {
                     .addComponent(cb_cod_forn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_dt_ultima_compra)
-                    .addComponent(tf_dt_ult_compra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_dt_ult_venda)
-                    .addComponent(tf_dt_ult_venda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_dt_cadastro)
-                    .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_quant_estoq)
                     .addComponent(tf_quant_estoq, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botao_salvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_novo_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton4))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Botao_sair)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jButton_novo_reg, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(botao_salvar, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGap(18, 18, 18))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE))))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel_data)
                 .addGap(4, 4, 4)
                 .addComponent(jLabel_hora))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {tf_dt_ult_compra, tf_dt_ult_venda});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botao_alterar, botao_salvar, jButton_novo_reg});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -404,8 +497,6 @@ public class Cad_produto extends javax.swing.JFrame {
         tf_fabricante.setText("");
         tf_classificacao.setText("");
         tf_fornecedor.setText("");
-        tf_dt_ult_compra.setText("");
-        tf_dt_ult_venda.setText("");
         tf_quant_estoq.setText("");
        //instruções para inserir data atual ao novo registro
         Date data = new Date();
@@ -430,29 +521,7 @@ public class Cad_produto extends javax.swing.JFrame {
     }//GEN-LAST:event_timer1OnTime
 
     private void botao_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_salvarActionPerformed
-        // TODO add your handling code here:
-        p = new Produto();
-        p.setNomeProduto(tf_descricao.getText());
-        p.setFabricanteProduto(tf_fabricante.getText());
-        try { 
-         
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy"); 
-        Calendar cal = Calendar.getInstance(); 
-        cal.setTime(sdf.parse(tf_dt_cadastro.getText())); 
-         p.setDataCadastro(cal);
-        } catch (ParseException e) { 
-        e.printStackTrace(); 
-        }
-        ProdutoFacade facade = new ProdutoFacade();
-        facade.criarProduto(p);
-
-
-        
-
-
-
-       
-
+        seta_produto();
     }//GEN-LAST:event_botao_salvarActionPerformed
 
     /**
@@ -473,6 +542,11 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JButton botao_salvar;
     private javax.swing.JComboBox cb_cod_forn;
     private javax.swing.JComboBox cb_unidade;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton_novo_reg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_cod_forn;
@@ -481,23 +555,20 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_data;
     private javax.swing.JLabel jLabel_descricao;
     private javax.swing.JLabel jLabel_dt_cadastro;
-    private javax.swing.JLabel jLabel_dt_ult_venda;
-    private javax.swing.JLabel jLabel_dt_ultima_compra;
     private javax.swing.JLabel jLabel_fabricante;
     private javax.swing.JLabel jLabel_fornecedor;
     private javax.swing.JLabel jLabel_grupo;
     private javax.swing.JLabel jLabel_hora;
     private javax.swing.JLabel jLabel_quant_estoq;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenu_sair;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField tf_classificacao;
     private javax.swing.JTextField tf_cod_produto;
     private javax.swing.JTextField tf_conteudo;
     private javax.swing.JTextField tf_descricao;
     private javax.swing.JTextField tf_dt_cadastro;
-    private javax.swing.JTextField tf_dt_ult_compra;
-    private javax.swing.JTextField tf_dt_ult_venda;
     private javax.swing.JTextField tf_fabricante;
     private javax.swing.JTextField tf_fornecedor;
     private javax.swing.JTextField tf_grupo;
@@ -505,5 +576,26 @@ public class Cad_produto extends javax.swing.JFrame {
     private org.netbeans.examples.lib.timerbean.Timer timer1;
     // End of variables declaration//GEN-END:variables
 
-    
+    public void seta_produto(){
+     // metodo para setar o produto a ser salvo
+        p = new Produto();
+        p.setNomeProduto(tf_descricao.getText());
+        p.setFabricanteProduto(tf_fabricante.getText());
+        p.setGrupoCodigo(Integer.parseInt(tf_grupo.getText()));
+        p.setFabricanteProduto(tf_fabricante.getText());
+        p.setClassificacaoProduto(tf_classificacao.getText());
+        //faltao campo unidade
+        //p.setCodigoFornecedor(Integer.parseInt(cb_cod_forn.getSelectedItem()));
+        p.setUltimaQuantidadeProduto(Integer.parseInt(tf_quant_estoq.getText()));
+        try {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(sdf.parse(tf_dt_cadastro.getText()));
+        p.setDataCadastro(cal);
+        } catch (ParseException e) {
+        e.printStackTrace();
+        }
+        ProdutoFacade facade = new ProdutoFacade();
+        facade.criarProduto(p);
+    }
 }
