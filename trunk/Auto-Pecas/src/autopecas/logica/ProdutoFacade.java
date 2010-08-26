@@ -5,7 +5,6 @@
 
 package autopecas.logica;
 
-import autopecas.persistencia.FonteDeDados;
 import autopecas.persistencia.ProdutoDao;
 
 /**
@@ -25,6 +24,11 @@ public class ProdutoFacade {
     dao.salvarProduto(p);
         
        
+    }
+    public void pesquisaProdutoFacade(Produto p){
+       // Produto dao = new ProdutoDao();
+
+
     }
 
 }

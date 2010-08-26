@@ -6,7 +6,6 @@
 package autopecas.persistencia;
 
 import autopecas.logica.Produto;
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 

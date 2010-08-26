@@ -6,9 +6,17 @@
 package autopecas.persistencia;
 
 import autopecas.logica.Produto;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import org.hibernate.Criteria;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -16,6 +24,7 @@ import org.hibernate.Transaction;
  */
 public class ProdutoDao extends FonteDeDados {
     private SessionFactory sessions;
+   // private Session sessao;
 
 
     public ProdutoDao(){
@@ -37,5 +46,26 @@ public class ProdutoDao extends FonteDeDados {
            e.printStackTrace();
        }
     }
+    public List<Produto> pesquisaProdutoDaoNome(String nome){
+        sessions = config.buildSessionFactory();
+        Session session =  sessions.openSession();
+        Criteria crit=session.createCriteria(Produto.class);
+         
+        crit.add(Restrictions.ilike("nomeProduto", "%"+nome+"%"));
+       
+         return crit.list();
+        }
 
-}
+    public List<Produto> pesquisaProdutoDaoFabricante(String fabricante){
+        
+        sessions = config.buildSessionFactory();
+        Session session =  sessions.openSession();
+        Criteria crit=session.createCriteria(Produto.class);
+
+        crit.add(Restrictions.ilike("fabricanteProduto", fabricante));
+
+         return crit.list();
+        }
+    }
+
+
