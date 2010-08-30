@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import org.hibernate.Criteria;
+import org.hibernate.ScrollableResults;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -24,6 +25,8 @@ import org.hibernate.criterion.Restrictions;
  */
 public class ProdutoDao extends FonteDeDados {
     private SessionFactory sessions;
+    private static Criteria crit;
+    private static ScrollableResults cursor;
    // private Session sessao;
 
 
@@ -49,10 +52,10 @@ public class ProdutoDao extends FonteDeDados {
     public List<Produto> pesquisaProdutoDaoNome(String nome){
         sessions = config.buildSessionFactory();
         Session session =  sessions.openSession();
-        Criteria crit=session.createCriteria(Produto.class);
+         crit=session.createCriteria(Produto.class);
          
         crit.add(Restrictions.ilike("nomeProduto", "%"+nome+"%"));
-       
+
          return crit.list();
         }
 
@@ -60,12 +63,18 @@ public class ProdutoDao extends FonteDeDados {
         
         sessions = config.buildSessionFactory();
         Session session =  sessions.openSession();
-        Criteria crit=session.createCriteria(Produto.class);
+         crit=session.createCriteria(Produto.class);
 
         crit.add(Restrictions.ilike("fabricanteProduto", fabricante));
 
          return crit.list();
         }
+    public void proximoElemento(){
+       cursor= crit.scroll();
+       cursor.next();
+
+    }
+        
     }
 
 
