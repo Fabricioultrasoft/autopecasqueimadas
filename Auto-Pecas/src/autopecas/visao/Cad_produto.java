@@ -25,7 +25,6 @@ import javax.swing.JCheckBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
 import javax.swing.text.MaskFormatter;
-import org.hibernate.ScrollableResults;
 
 /**
  *
@@ -67,6 +66,7 @@ public class Cad_produto extends javax.swing.JFrame {
     private void initComponents() {
 
         timer1 = new org.netbeans.examples.lib.timerbean.Timer();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel_codigo = new javax.swing.JLabel();
         tf_cod_produto = new javax.swing.JTextField();
         jLabel_descricao = new javax.swing.JLabel();
@@ -96,6 +96,10 @@ public class Cad_produto extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox();
+        jComboBox2 = new javax.swing.JComboBox();
+        jPanel1 = new javax.swing.JPanel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu_sair = new javax.swing.JMenu();
 
@@ -111,7 +115,7 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_codigo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_codigo.setText("Código:");
 
-        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_cod_produto.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_descricao.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_descricao.setText("Descrição:");
@@ -121,7 +125,7 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_grupo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_grupo.setText("Grupo:");
 
-        tf_grupo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_grupo.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_fabricante.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_fabricante.setText("Fabricante:");
@@ -131,18 +135,18 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel1.setText("Classificação:");
 
-        tf_classificacao.setFont(new java.awt.Font("Arial", 0, 14));
+        tf_classificacao.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jLabel_fornecedor.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_fornecedor.setText("Fornecedor:");
 
-        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/GRAVAR2.jpg"))); // NOI18N
+        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/GRAVAR2.jpg"))); // NOI18N
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
         botao_salvar.setEnabled(false);
         botao_salvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botao_salvar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_salvar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_salvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         botao_salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,28 +154,28 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        botao_alterar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_alterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/alterar_dados.jpg"))); // NOI18N
+        botao_alterar.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_alterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/alterar_dados.jpg"))); // NOI18N
         botao_alterar.setText("Alterar Registro");
         botao_alterar.setToolTipText("");
         botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_excluir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/EXCLUIR.jpg"))); // NOI18N
+        botao_excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/EXCLUIR.jpg"))); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        Botao_sair.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Botao_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/SAIR.jpg"))); // NOI18N
+        Botao_sair.setFont(new java.awt.Font("Arial", 0, 12));
+        Botao_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Botao_sair.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Botao_sair.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Botao_sair.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Botao_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,12 +183,12 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton_novo_reg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/novo_reg.gif"))); // NOI18N
+        jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12));
+        jButton_novo_reg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/novo_reg.gif"))); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
         jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton_novo_reg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton_novo_reg.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton_novo_reg.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButton_novo_reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,19 +199,19 @@ public class Cad_produto extends javax.swing.JFrame {
         jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_dt_cadastro.setText("Data do Cadastro:");
 
-        tf_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_data.setText("data");
 
         jLabel_hora.setText("hora");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/primeiro_reg.gif"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/primeiro_reg.gif"))); // NOI18N
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/anterior.gif"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/anterior.gif"))); // NOI18N
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/proximo.gif"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/proximo.gif"))); // NOI18N
         jButton3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -216,12 +220,10 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/imagens/ultimo_reg.gif"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/ultimo_reg.gif"))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -259,7 +261,7 @@ public class Cad_produto extends javax.swing.JFrame {
         jTable1.getColumnModel().getColumn(4).setPreferredWidth(70);
         jTable1.getColumnModel().getColumn(4).setMaxWidth(70);
 
-        jButton5.setFont(new java.awt.Font("Arial", 0, 14));
+        jButton5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton5.setText("Pesquisar");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,8 +269,41 @@ public class Cad_produto extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Arial", 0, 14));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Unidade", "Quilo", "Metro", "Par", "Jogo" }));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
+        jRadioButton1.setText("Nome");
+        jRadioButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("Código");
+        jRadioButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jRadioButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton2))
+        );
 
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
@@ -287,32 +322,35 @@ public class Cad_produto extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_data)
-                .addContainerGap(783, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_hora)
-                .addContainerGap(783, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(231, 231, 231)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
-                .addContainerGap(262, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
-                        .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jButton_novo_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botao_alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(botao_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Botao_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(216, 216, 216)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jButton3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel_fornecedor)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -320,26 +358,14 @@ public class Cad_produto extends javax.swing.JFrame {
                                 .addGap(43, 43, 43)
                                 .addComponent(jLabel_dt_cadastro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(197, 197, 197))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tf_classificacao, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
-                                    .addGap(254, 254, 254))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton_novo_reg, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(botao_salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(botao_alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(botao_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(Botao_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(tf_classificacao))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel_grupo)
@@ -358,10 +384,19 @@ public class Cad_produto extends javax.swing.JFrame {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel_fabricante)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(tf_fabricante)))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, 0))))
+                                                .addComponent(tf_fabricante)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel_data)
+                            .addComponent(jLabel_hora))))
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Botao_sair, botao_alterar, botao_excluir, botao_salvar, jButton_novo_reg});
@@ -371,50 +406,56 @@ public class Cad_produto extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_cod_produto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_codigo)
-                    .addComponent(jLabel_descricao)
-                    .addComponent(tf_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_grupo)
-                    .addComponent(tf_grupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_fabricante)
-                    .addComponent(tf_fabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(tf_classificacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_fornecedor)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_dt_cadastro)
-                    .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4))
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                .addContainerGap()
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tf_cod_produto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_codigo)
+                            .addComponent(jLabel_descricao)
+                            .addComponent(tf_descricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_grupo)
+                            .addComponent(tf_grupo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_fabricante)
+                            .addComponent(tf_fabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(tf_classificacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel_fornecedor)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_dt_cadastro)
+                            .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton4))
+                            .addComponent(jButton2)
+                            .addComponent(jButton3)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jButton_novo_reg, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(botao_salvar, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(36, 36, 36)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                    .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                    .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel_data)
                 .addGap(4, 4, 4)
-                .addComponent(jLabel_hora))
+                .addComponent(jLabel_hora)
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botao_alterar, botao_salvar, jButton_novo_reg});
@@ -539,6 +580,7 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JButton botao_alterar;
     private javax.swing.JButton botao_excluir;
     private javax.swing.JButton botao_salvar;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -546,6 +588,7 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton_novo_reg;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_codigo;
     private javax.swing.JLabel jLabel_data;
@@ -557,6 +600,9 @@ public class Cad_produto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_hora;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenu_sair;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField tf_classificacao;

@@ -84,39 +84,39 @@ public class Entrada_material extends javax.swing.JFrame {
 
         tf_num_NF.setFont(new java.awt.Font("Arial", 0, 14));
 
-        jLabel_cod_forn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_cod_forn.setText("Cód. Fornecedor");
 
         cb_cod_forn.setFont(new java.awt.Font("Arial", 0, 14));
         cb_cod_forn.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12));
-        botao_salvar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\GRAVAR2.jpg")); // NOI18N
+        botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        botao_salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/GRAVAR2.jpg"))); // NOI18N
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
         botao_salvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botao_salvar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_salvar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_salvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        botao_alterar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\alterar_dados.jpg")); // NOI18N
+        botao_alterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/alterar_dados.jpg"))); // NOI18N
         botao_alterar.setText("Alterar Registro");
         botao_alterar.setToolTipText("");
         botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        botao_excluir.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\EXCLUIR.jpg")); // NOI18N
+        botao_excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/EXCLUIR.jpg"))); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        Botao_sair.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\SAIR.jpg")); // NOI18N
+        Botao_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Botao_sair.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        Botao_sair.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Botao_sair.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Botao_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,11 +125,11 @@ public class Entrada_material extends javax.swing.JFrame {
         });
 
         jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\botoes\\novo_reg.gif")); // NOI18N
+        jButton_novo_reg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/novo_reg.gif"))); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
         jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton_novo_reg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton_novo_reg.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton_novo_reg.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButton_novo_reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +137,7 @@ public class Entrada_material extends javax.swing.JFrame {
             }
         });
 
-        jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_dt_cadastro.setText("Data da Entrada:");
 
         tf_dt_cadastro.setFont(new java.awt.Font("Arial", 0, 14));

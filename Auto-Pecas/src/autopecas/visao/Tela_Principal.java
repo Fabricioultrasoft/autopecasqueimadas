@@ -52,11 +52,11 @@ public class Tela_Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu_cadastros = new javax.swing.JMenu();
-        jMenuItem_cad_produtos = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem_cad_fornecedor = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem_sair = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         jMenu_sair = new javax.swing.JMenu();
 
         timer1.addTimerListener(new org.netbeans.examples.lib.timerbean.TimerListener() {
@@ -133,45 +133,30 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenu_cadastros.setBackground(new java.awt.Color(0, 204, 0));
         jMenu_cadastros.setText("Cadastros");
 
-        jMenuItem_cad_produtos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem_cad_produtos.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\produto.gif")); // NOI18N
-        jMenuItem_cad_produtos.setText("Cadastro de Produtos");
-        jMenuItem_cad_produtos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItem_cad_produtosMousePressed(evt);
-            }
-        });
-        jMenu_cadastros.add(jMenuItem_cad_produtos);
+        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/produto.gif"))); // NOI18N
+        jMenuItem3.setText("Cadastro de Produtos");
+        jMenu_cadastros.add(jMenuItem3);
 
         jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\cliente.gif")); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/cliente.gif"))); // NOI18N
         jMenuItem1.setText("Cadastro de Clientes");
         jMenu_cadastros.add(jMenuItem1);
 
-        jMenuItem_cad_fornecedor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem_cad_fornecedor.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\fornecedor2.png")); // NOI18N
-        jMenuItem_cad_fornecedor.setText("Cadastro de Fornecedores");
-        jMenuItem_cad_fornecedor.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItem_cad_fornecedorMousePressed(evt);
-            }
-        });
-        jMenu_cadastros.add(jMenuItem_cad_fornecedor);
-
         jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\icone_cadastro_cliente.jpg")); // NOI18N
-        jMenuItem2.setText("Cadastro de Funcionários");
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/fornecedor2.png"))); // NOI18N
+        jMenuItem2.setText("Cadastro de Fornecedores");
         jMenu_cadastros.add(jMenuItem2);
 
-        jMenuItem_sair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem_sair.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\sair2.gif")); // NOI18N
-        jMenuItem_sair.setText("Sair");
-        jMenuItem_sair.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jMenuItem_sairMousePressed(evt);
-            }
-        });
-        jMenu_cadastros.add(jMenuItem_sair);
+        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/icone_cadastro_cliente.jpg"))); // NOI18N
+        jMenuItem4.setText("Cadastro de Funcionários");
+        jMenu_cadastros.add(jMenuItem4);
+
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
+        jMenuItem5.setText("Sair");
+        jMenu_cadastros.add(jMenuItem5);
 
         jMenuBar1.add(jMenu_cadastros);
 
@@ -260,11 +245,6 @@ public class Tela_Principal extends javax.swing.JFrame {
         }
 }//GEN-LAST:event_jButton_sairActionPerformed
 
-    private void jMenuItem_cad_produtosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_cad_produtosMousePressed
-        //evento do menuItem_cad_produtos
-        new Cad_produto().show();
-    }//GEN-LAST:event_jMenuItem_cad_produtosMousePressed
-
     private void jButton_produtosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_produtosActionPerformed
         // evento do botão entrada de material
         new Entrada_material().show();
@@ -310,9 +290,9 @@ public class Tela_Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem_cad_fornecedor;
-    private javax.swing.JMenuItem jMenuItem_cad_produtos;
-    private javax.swing.JMenuItem jMenuItem_sair;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenu jMenu_cadastros;
     private javax.swing.JMenu jMenu_sair;
     private javax.swing.JPanel jPanel1;
