@@ -120,7 +120,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         jLabel_razao_social.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_razao_social.setText("Razão Social:");
 
-        tf_razao_social.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_razao_social.setFont(new java.awt.Font("Arial", 0, 14));
 
         jLabel_cgc_cnpj.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_cgc_cnpj.setText("CGC/CNPJ:");
@@ -148,7 +148,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         jLabel_nome_fantasia.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_nome_fantasia.setText("Nome Fantasia:");
 
-        tf_nome_fantasia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_nome_fantasia.setFont(new java.awt.Font("Arial", 0, 14));
 
         cb_uf.setFont(new java.awt.Font("Arial", 0, 14));
         cb_uf.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO" }));
@@ -164,7 +164,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         tf_contato1.setFont(new java.awt.Font("Arial", 0, 14));
 
         botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_salvar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\GRAVAR3.jpg")); // NOI18N
+        botao_salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/GRAVAR2.jpg"))); // NOI18N
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
         botao_salvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -172,7 +172,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         botao_salvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_alterar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_alterar.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\alterar_dados2.jpg")); // NOI18N
+        botao_alterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/alterar_dados.jpg"))); // NOI18N
         botao_alterar.setText("Alterar Registro");
         botao_alterar.setToolTipText("");
         botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -180,7 +180,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_excluir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_excluir.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\EXCLUIR2.jpg")); // NOI18N
+        botao_excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/EXCLUIR.jpg"))); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -188,7 +188,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         Botao_sair.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Botao_sair.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\SAIR2.jpg")); // NOI18N
+        Botao_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -201,7 +201,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         });
 
         jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton_novo_reg.setIcon(new javax.swing.ImageIcon("C:\\Documents and Settings\\Kelly\\Meus documentos\\NetBeansProjects\\Auto-Pecas\\imagens\\novo_reg.gif")); // NOI18N
+        jButton_novo_reg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/novo_reg.gif"))); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
         jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -235,12 +235,12 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         jLabel_email.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_email.setText("E-mail:");
 
-        tf_email.setFont(new java.awt.Font("Arial", 0, 14));
+        tf_email.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("CEP:");
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 14));
+        jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
@@ -302,7 +302,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel_email)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tf_email, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE))))
+                                        .addComponent(tf_email, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
@@ -332,7 +332,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                                         .addComponent(jLabel_bairro)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel1)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -343,12 +343,12 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                 .addComponent(jLabel_codigo)
                 .addGap(5, 5, 5)
                 .addComponent(tf_cod_forn, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(756, Short.MAX_VALUE))
+                .addContainerGap(754, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel_razao_social)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf_razao_social, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
+                .addComponent(tf_razao_social, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
                 .addGap(398, 398, 398))
             .addGroup(layout.createSequentialGroup()
                 .addGap(72, 72, 72)
@@ -361,7 +361,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                 .addComponent(botao_excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Botao_sair, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Botao_sair, botao_alterar, botao_excluir, botao_salvar});
@@ -371,7 +371,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_cod_forn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_codigo))
@@ -401,8 +401,8 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                     .addComponent(tf_cidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_uf)
                     .addComponent(cb_uf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_contato1)
@@ -416,13 +416,12 @@ public class Cad_fornecedor extends javax.swing.JFrame {
                     .addComponent(jLabel_dt_cadastro)
                     .addComponent(tf_dt_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Botao_sair)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(botao_alterar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botao_salvar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton_novo_reg, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botao_excluir)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_alterar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_salvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_novo_reg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(96, 96, 96)
                 .addComponent(jLabel_data)
                 .addGap(4, 4, 4)
