@@ -27,9 +27,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/autopecas/icones/produto.gif"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Produtos"/>
               </Properties>
               <Events>
@@ -41,9 +38,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/autopecas/icones/cliente.gif"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Clientes"/>
               </Properties>
             </MenuItem>
@@ -51,9 +45,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/autopecas/icones/fornecedor2.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Fornecedores"/>
               </Properties>
@@ -63,9 +54,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/autopecas/icones/icone_cadastro_cliente.jpg"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro de Funcion&#xe1;rios"/>
               </Properties>
             </MenuItem>
@@ -73,9 +61,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="14" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/autopecas/icones/sair2.gif"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>

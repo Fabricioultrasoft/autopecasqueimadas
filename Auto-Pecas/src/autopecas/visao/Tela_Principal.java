@@ -134,7 +134,6 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenu_cadastros.setText("Cadastros");
 
         jMenuItem3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/produto.gif"))); // NOI18N
         jMenuItem3.setText("Cadastro de Produtos");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,23 +142,19 @@ public class Tela_Principal extends javax.swing.JFrame {
         });
         jMenu_cadastros.add(jMenuItem3);
 
-        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14));
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/cliente.gif"))); // NOI18N
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem1.setText("Cadastro de Clientes");
         jMenu_cadastros.add(jMenuItem1);
 
-        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14));
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/fornecedor2.png"))); // NOI18N
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem2.setText("Cadastro de Fornecedores");
         jMenu_cadastros.add(jMenuItem2);
 
-        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 14));
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/icone_cadastro_cliente.jpg"))); // NOI18N
+        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem4.setText("Cadastro de Funcionários");
         jMenu_cadastros.add(jMenuItem4);
 
-        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 14));
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem5.setText("Sair");
         jMenu_cadastros.add(jMenuItem5);
 
