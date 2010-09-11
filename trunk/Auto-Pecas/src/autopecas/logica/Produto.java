@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package autopecas.logica;
 
 import java.util.Calendar;
@@ -19,81 +18,72 @@ import javax.persistence.TemporalType;
  */
 @Entity
 public class Produto {
-   @Id
-   @GeneratedValue(strategy=GenerationType.AUTO)
-    private  int codigoProduto;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int codigoProduto;
     private String nomeProduto;
-    private String unidadeProduto;
-    private String referenciaProduto;
-    private int grupoCodigo;
-    private String fabricanteProduto;
-    private String classificacaoProduto;
-    private double custoProduto;
-    private double medioProduto;
-    private double vendaProduto;
-    private String alfaProduto;
-    private String aplicacaoProduto;
-    private String codigoBarraProduto;
-    private int codigoFabricaProduto;
-    private int ultimaNotaProduto;
-    private int codigoFornecedor;
+    private String unidade;
+    private String referencia;
+    private String aplicacao;
+    @Temporal(TemporalType.DATE)
+    private Calendar dataCadastro;
+   //ate aqui tem os campos na tela cad_produto
+    private String produtoUltimanota;
+    private double precoCusto;
+    private double precoVenda;
     @Temporal(TemporalType.DATE)
     private Calendar ultimaCompraProduto;
-    private int ultimaQuantidadeProduto;
-    @Temporal(TemporalType.DATE)
-    private Calendar ultimoMovimentoProduto;
     @Temporal(TemporalType.DATE)
     private Calendar ultimaVendaProduto;
     private int estoqueProduto;
-    @Temporal(TemporalType.DATE)
-    private Calendar dataCadastro;
 
-    public String getAlfaProduto() {
-        return alfaProduto;
+    public String getAplicacao() {
+        return aplicacao;
     }
 
-    public void setAlfaProduto(String alfaProduto) {
-        this.alfaProduto = alfaProduto;
+    public void setAplicacao(String aplicacao) {
+        this.aplicacao = aplicacao;
     }
 
-    public String getAplicacaoProduto() {
-        return aplicacaoProduto;
+    public double getPrecoCusto() {
+        return precoCusto;
     }
 
-    public void setAplicacaoProduto(String aplicacaoProduto) {
-        this.aplicacaoProduto = aplicacaoProduto;
+    public void setPrecoCusto(double precoCusto) {
+        this.precoCusto = precoCusto;
     }
 
-    public String getClassificacaoProduto() {
-        return classificacaoProduto;
+    public double getPrecoVenda() {
+        return precoVenda;
     }
 
-    public void setClassificacaoProduto(String classificacaoProduto) {
-        this.classificacaoProduto = classificacaoProduto;
+    public void setPrecoVenda(double precoVenda) {
+        this.precoVenda = precoVenda;
     }
 
-    public String getCodigoBarraProduto() {
-        return codigoBarraProduto;
+    public String getProdutoUltimanota() {
+        return produtoUltimanota;
     }
 
-    public void setCodigoBarraProduto(String codigoBarraProduto) {
-        this.codigoBarraProduto = codigoBarraProduto;
+    public void setProdutoUltimanota(String produtoUltimanota) {
+        this.produtoUltimanota = produtoUltimanota;
     }
 
-    public int getCodigoFabricaProduto() {
-        return codigoFabricaProduto;
+    public String getReferencia() {
+        return referencia;
     }
 
-    public void setCodigoFabricaProduto(int codigoFabricaProduto) {
-        this.codigoFabricaProduto = codigoFabricaProduto;
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
     }
 
-    public int getCodigoFornecedor() {
-        return codigoFornecedor;
+    public String getUnidade() {
+        return unidade;
     }
 
-    public void setCodigoFornecedor(int codigoFornecedor) {
-        this.codigoFornecedor = codigoFornecedor;
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
     }
 
     public int getCodigoProduto() {
@@ -104,17 +94,11 @@ public class Produto {
         this.codigoProduto = codigoProduto;
     }
 
-    public double getCustoProduto() {
-        return custoProduto;
-    }
-
-    public void setCustoProduto(double custoProduto) {
-        this.custoProduto = custoProduto;
-    }
-    public Calendar getDataCadastro(){
+    public Calendar getDataCadastro() {
         return dataCadastro;
     }
-    public void setDataCadastro(Calendar dataCadastro){
+
+    public void setDataCadastro(Calendar dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 
@@ -126,44 +110,12 @@ public class Produto {
         this.estoqueProduto = estoqueProduto;
     }
 
-    public String getFabricanteProduto() {
-        return fabricanteProduto;
-    }
-
-    public void setFabricanteProduto(String fabricanteProduto) {
-        this.fabricanteProduto = fabricanteProduto;
-    }
-
-    public int getGrupoCodigo() {
-        return grupoCodigo;
-    }
-
-    public void setGrupoCodigo(int grupoCodigo) {
-        this.grupoCodigo = grupoCodigo;
-    }
-
-    public double getMedioProduto() {
-        return medioProduto;
-    }
-
-    public void setMedioProduto(double medioProduto) {
-        this.medioProduto = medioProduto;
-    }
-
     public String getNomeProduto() {
         return nomeProduto;
     }
 
     public void setNomeProduto(String nomeProduto) {
         this.nomeProduto = nomeProduto;
-    }
-
-    public String getReferenciaProduto() {
-        return referenciaProduto;
-    }
-
-    public void setReferenciaProduto(String referenciaProduto) {
-        this.referenciaProduto = referenciaProduto;
     }
 
     public Calendar getUltimaCompraProduto() {
@@ -174,22 +126,6 @@ public class Produto {
         this.ultimaCompraProduto = ultimaCompraProduto;
     }
 
-    public int getUltimaNotaProduto() {
-        return ultimaNotaProduto;
-    }
-
-    public void setUltimaNotaProduto(int ultimaNotaProduto) {
-        this.ultimaNotaProduto = ultimaNotaProduto;
-    }
-
-    public int getUltimaQuantidadeProduto() {
-        return ultimaQuantidadeProduto;
-    }
-
-    public void setUltimaQuantidadeProduto(int ultimaQuantidadeProduto) {
-        this.ultimaQuantidadeProduto = ultimaQuantidadeProduto;
-    }
-
     public Calendar getUltimaVendaProduto() {
         return ultimaVendaProduto;
     }
@@ -197,29 +133,4 @@ public class Produto {
     public void setUltimaVendaProduto(Calendar ultimaVendaProduto) {
         this.ultimaVendaProduto = ultimaVendaProduto;
     }
-
-    public Calendar getUltimoMovimentoProduto() {
-        return ultimoMovimentoProduto;
-    }
-
-    public void setUltimoMovimentoProduto(Calendar ultimoMovimentoProduto) {
-        this.ultimoMovimentoProduto = ultimoMovimentoProduto;
-    }
-
-    public String getUnidadeProduto() {
-        return unidadeProduto;
-    }
-
-    public void setUnidadeProduto(String unidadeProduto) {
-        this.unidadeProduto = unidadeProduto;
-    }
-
-    public double getVendaProduto() {
-        return vendaProduto;
-    }
-
-    public void setVendaProduto(double vendaProduto) {
-        this.vendaProduto = vendaProduto;
-    }
-
 }
