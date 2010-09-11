@@ -164,7 +164,6 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         tf_contato1.setFont(new java.awt.Font("Arial", 0, 14));
 
         botao_salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/GRAVAR2.jpg"))); // NOI18N
         botao_salvar.setText("Salvar");
         botao_salvar.setToolTipText("");
         botao_salvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -172,7 +171,6 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         botao_salvar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_alterar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_alterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/alterar_dados.jpg"))); // NOI18N
         botao_alterar.setText("Alterar Registro");
         botao_alterar.setToolTipText("");
         botao_alterar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -180,7 +178,6 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         botao_excluir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        botao_excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/EXCLUIR.jpg"))); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -188,7 +185,6 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         Botao_sair.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Botao_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -201,7 +197,6 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         });
 
         jButton_novo_reg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton_novo_reg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/novo_reg.gif"))); // NOI18N
         jButton_novo_reg.setText("Novo Registro");
         jButton_novo_reg.setToolTipText("");
         jButton_novo_reg.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -235,12 +230,12 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         jLabel_email.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_email.setText("E-mail:");
 
-        tf_email.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        tf_email.setFont(new java.awt.Font("Arial", 0, 14));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel1.setText("CEP:");
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Arial", 0, 14));
 
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
@@ -371,7 +366,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(52, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_cod_forn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_codigo))

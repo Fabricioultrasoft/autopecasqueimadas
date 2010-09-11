@@ -154,16 +154,14 @@ public class Cad_produto extends javax.swing.JFrame {
         botao_alterar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_alterar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        botao_excluir.setFont(new java.awt.Font("Arial", 0, 12));
-        botao_excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/EXCLUIR.jpg"))); // NOI18N
+        botao_excluir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botao_excluir.setText("Excluir Registro");
         botao_excluir.setToolTipText("");
         botao_excluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_excluir.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         botao_excluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        Botao_sair.setFont(new java.awt.Font("Arial", 0, 12));
-        Botao_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
+        Botao_sair.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Botao_sair.setText("Sair");
         Botao_sair.setToolTipText("");
         Botao_sair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -196,13 +194,9 @@ public class Cad_produto extends javax.swing.JFrame {
 
         jLabel_hora.setText("hora");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/primeiro_reg.gif"))); // NOI18N
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/anterior.gif"))); // NOI18N
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/proximo.gif"))); // NOI18N
         jButton3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -210,8 +204,6 @@ public class Cad_produto extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/ultimo_reg.gif"))); // NOI18N
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
