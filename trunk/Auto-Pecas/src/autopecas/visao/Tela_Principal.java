@@ -113,7 +113,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton_sair)
-                .addContainerGap(387, Short.MAX_VALUE))
+                .addContainerGap(383, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton_produtos, jButton_sair});
@@ -136,24 +136,29 @@ public class Tela_Principal extends javax.swing.JFrame {
         jMenuItem3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/produto.gif"))); // NOI18N
         jMenuItem3.setText("Cadastro de Produtos");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu_cadastros.add(jMenuItem3);
 
-        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/cliente.gif"))); // NOI18N
         jMenuItem1.setText("Cadastro de Clientes");
         jMenu_cadastros.add(jMenuItem1);
 
-        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/fornecedor2.png"))); // NOI18N
         jMenuItem2.setText("Cadastro de Fornecedores");
         jMenu_cadastros.add(jMenuItem2);
 
-        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/icone_cadastro_cliente.jpg"))); // NOI18N
         jMenuItem4.setText("Cadastro de Funcionários");
         jMenu_cadastros.add(jMenuItem4);
 
-        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 14));
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autopecas/icones/sair2.gif"))); // NOI18N
         jMenuItem5.setText("Sair");
         jMenu_cadastros.add(jMenuItem5);
@@ -184,7 +189,7 @@ public class Tela_Principal extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel_data)
                                 .addComponent(jLabel_hora))
-                            .addContainerGap(603, Short.MAX_VALUE))
+                            .addContainerGap(595, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jLabel1)
@@ -197,7 +202,7 @@ public class Tela_Principal extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(254, Short.MAX_VALUE)
+                .addContainerGap(250, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
@@ -267,6 +272,11 @@ public class Tela_Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Erro ao fechar o sistema! "+erro);
         }
     }//GEN-LAST:event_jMenuItem_sairMousePressed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new Cad_produto().show();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
     * @param args the command line arguments

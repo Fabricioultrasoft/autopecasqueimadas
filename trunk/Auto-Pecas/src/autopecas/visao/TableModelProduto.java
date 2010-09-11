@@ -5,7 +5,7 @@
 package autopecas.visao;
 
 import autopecas.logica.Produto;
-import javax.swing.event.TableModelEvent;
+import autopecas.visao.Cad_produto;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -43,9 +43,9 @@ public class TableModelProduto extends AbstractTableModel {
         }else if (columnIndex == 1){
             return produto.getNomeProduto();
         } else if (columnIndex == 2) {
-                return produto.getFabricanteProduto();
+                return produto.getReferencia();
         } else if (columnIndex == 3) {
-                    return produto.getCodigoFornecedor();
+                    return produto.getAplicacao();
 
                 }else
                     return produto.getEstoqueProduto();

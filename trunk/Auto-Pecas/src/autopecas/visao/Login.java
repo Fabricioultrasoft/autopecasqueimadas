@@ -23,6 +23,8 @@ public class Login extends javax.swing.JFrame {
     /** Creates new form Login */
     public Login() {
         initComponents();
+        //FonteDeDados dados = new FonteDeDados();
+        //dados.criarBanco();
     }
 
     /** This method is called from within the constructor to
