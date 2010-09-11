@@ -6,9 +6,6 @@
 package autopecas.persistencia;
 
 import autopecas.logica.Produto;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.ScrollableResults;
@@ -16,7 +13,6 @@ import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 /**
@@ -33,8 +29,6 @@ public class ProdutoDao extends FonteDeDados {
     public ProdutoDao(){
     
     }
-    
-    //SALVAR FILME ---------------------------------------------------------
 
 
     public void salvarProduto(Produto p){
@@ -52,29 +46,8 @@ public class ProdutoDao extends FonteDeDados {
     public List<Produto> pesquisaProdutoDaoNome(String nome){
         sessions = config.buildSessionFactory();
         Session session =  sessions.openSession();
-         crit=session.createCriteria(Produto.class);
-         
+        crit=session.createCriteria(Produto.class);
         crit.add(Restrictions.ilike("nomeProduto", "%"+nome+"%"));
-
          return crit.list();
-        }
-
-    public List<Produto> pesquisaProdutoDaoFabricante(String fabricante){
-        
-        sessions = config.buildSessionFactory();
-        Session session =  sessions.openSession();
-         crit=session.createCriteria(Produto.class);
-
-        crit.add(Restrictions.ilike("fabricanteProduto", fabricante));
-
-         return crit.list();
-        }
-    public void proximoElemento(){
-       cursor= crit.scroll();
-       cursor.next();
-
+        }   
     }
-        
-    }
-
-
